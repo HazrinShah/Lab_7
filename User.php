@@ -35,6 +35,12 @@ class User
     // file ni yang proses collected data
 
 
+    public function getUsers()
+    {
+        $sql = "SELECT matric, name, role FROM users";
+        $result = $this->conn->query($sql);
+        return $result;
+    }
 
 
 
